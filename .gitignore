@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/adventofcode2022
+adventofcode2022.so
+adventofcode2022.dylib
+adventofcode2022.dll
+adventofcode2022.a
+adventofcode2022.lib
+adventofcode2022-test-*
+*.exe
+*.o
+*.obj
+*.lst
