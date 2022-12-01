@@ -5,5 +5,18 @@
 	"copyright": "Copyright © 2022, Fireeye64",
 	"description": "advent of code 2022",
 	"license": "proprietary",
-	"name": "adventofcode2022"
+	"name": "adventofcode2022",
+	"subPackages": [
+		{
+			"name": "day01_1",
+			"targetType": "executable",
+			"sourcePaths": ["day01_1/source"],
+			"workingDirectory": "day01_1"
+		}, {
+			"name": "day01_2",
+			"targetType": "executable",
+			"sourcePaths": ["day01_2/source"],
+			"workingDirectory": "day01_2"
+		}
+	]
 }
