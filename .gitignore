@@ -13,3 +13,4 @@ adventofcode2022-test-*
 *.o
 *.obj
 *.lst
+*.pdb
