@@ -17,6 +17,11 @@
 			"targetType": "executable",
 			"sourcePaths": ["day01_2/source"],
 			"workingDirectory": "day01_2"
+		}, {
+			"name": "day02",
+			"targetType": "executable",
+			"sourcePaths": ["day02/source"],
+			"workingDirectory": "day02"
 		}
 	]
 }
