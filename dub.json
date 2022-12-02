@@ -8,15 +8,10 @@
 	"name": "adventofcode2022",
 	"subPackages": [
 		{
-			"name": "day01_1",
+			"name": "day01",
 			"targetType": "executable",
-			"sourcePaths": ["day01_1/source"],
-			"workingDirectory": "day01_1"
-		}, {
-			"name": "day01_2",
-			"targetType": "executable",
-			"sourcePaths": ["day01_2/source"],
-			"workingDirectory": "day01_2"
+			"sourcePaths": ["day01/source"],
+			"workingDirectory": "day01"
 		}, {
 			"name": "day02",
 			"targetType": "executable",
