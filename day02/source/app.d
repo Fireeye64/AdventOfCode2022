@@ -1,11 +1,10 @@
+import benchmark: BenchmarkRunner;
 import std.stdio;
 
-void main() {
-	File inputFile = File("input.txt");
-	auto range = inputFile.byLine();
+void solve(string[] range) {
 	long totalScoreAction = 0;
 	long totalScoreOutcome = 0;
-	foreach (char[] line; range) {
+	foreach (line; range) {
 		if (line.length == 4) {
 			int myChoice = line[2] - 'X';
 			int opponentChoice = line[0] - 'A';
@@ -32,3 +31,5 @@ void main() {
 	writeln("My total score for part 1: ", totalScoreAction);
 	writeln("My total score for part 2: ", totalScoreOutcome);
 }
+
+mixin BenchmarkRunner!("input.txt", solve);

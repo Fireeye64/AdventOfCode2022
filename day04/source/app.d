@@ -1,3 +1,4 @@
+import benchmark: BenchmarkRunner;
 import std.stdio;
 import std.string : strip;
 import std.range: empty;
@@ -6,9 +7,7 @@ import std.algorithm.iteration: splitter;
 import std.algorithm.sorting: sort;
 import std.conv: to;
 
-void main() {
-	File inputFile = File("input.txt");
-	auto range = inputFile.byLine();
+void solve(string[] range) {
 	long resultContains = 0;
 	long resultOverlap = 0;
 	foreach (line; range) {
@@ -34,3 +33,5 @@ void main() {
 	writeln("My answer for part 1: ", resultContains);
 	writeln("My answer for part 2: ", resultOverlap);
 }
+
+mixin BenchmarkRunner!("input.txt", solve);

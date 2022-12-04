@@ -1,15 +1,14 @@
+import benchmark: BenchmarkRunner;
 import std.stdio;
 
-void main() {
-	File inputFile = File("input.txt");
-	auto range = inputFile.byLine();
+void solve(string[] range) {
 	byte[char] duplicateCheck;
 	int[char] occurrenceCheck;
 	bool foundDuplicate = false;
 	long resultSum = 0;
 	long resultOccurrence = 0;
 	int i = 2;
-	foreach (char[] line; range) {
+	foreach (line; range) {
 		i = (i + 1) % 3;
 		duplicateCheck.clear;
 		foundDuplicate = false;
@@ -60,3 +59,5 @@ void main() {
 	writeln("My total score for part 2: ", resultOccurrence);
 
 }
+
+mixin BenchmarkRunner!("input.txt", solve);

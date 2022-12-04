@@ -1,3 +1,4 @@
+import benchmark: BenchmarkRunner;
 import std.stdio;
 import std.string : strip;
 import std.range: empty;
@@ -6,12 +7,9 @@ import std.conv : to;
 import std.algorithm.sorting: sort;
 import std.algorithm.iteration: sum;
 
-long[] caloriesTotalList;
-
-void main() {
+void solve(string[] range) {
+	long[] caloriesTotalList;
 	long tmpCalories = 0;
-	File inputFile = File("input.txt");
-	auto range = inputFile.byLine();
 	foreach (line; range) {
 		if ((line.strip().empty) && (tmpCalories > 0)) {
 			caloriesTotalList ~= tmpCalories;
@@ -28,3 +26,5 @@ void main() {
 		writeln("Total of top 3 elements: ", sum(caloriesTotalList[0..3]));
 	}
 }
+
+mixin BenchmarkRunner!("input.txt", solve);

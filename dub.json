@@ -11,22 +11,34 @@
 			"name": "day01",
 			"targetType": "executable",
 			"sourcePaths": ["day01/source"],
-			"workingDirectory": "day01"
+			"workingDirectory": "day01",
+			"dependencies": {
+				"adventofcode2022": "*"
+			}
 		}, {
 			"name": "day02",
 			"targetType": "executable",
 			"sourcePaths": ["day02/source"],
-			"workingDirectory": "day02"
+			"workingDirectory": "day02",
+			"dependencies": {
+				"adventofcode2022": "*"
+			}
 		}, {
 			"name": "day03",
 			"targetType": "executable",
 			"sourcePaths": ["day03/source"],
-			"workingDirectory": "day03"
+			"workingDirectory": "day03",
+			"dependencies": {
+				"adventofcode2022": "*"
+			}
 		}, {
 			"name": "day04",
 			"targetType": "executable",
 			"sourcePaths": ["day04/source"],
-			"workingDirectory": "day04"
+			"workingDirectory": "day04",
+			"dependencies": {
+				"adventofcode2022": "*"
+			}
 		}
 	]
 }
