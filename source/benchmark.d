@@ -1,5 +1,3 @@
-import std.stdio;
-
 mixin template BenchmarkRunner(alias sourceFile, alias func) {
 	import std.stdio;
 	import std.datetime.stopwatch : StopWatch, AutoStart;
