@@ -31,18 +31,7 @@ void main() {
 		if (!((secondAssignment[0] > firstAssignment[1]) || (firstAssignment[0] > secondAssignment[1]))) {
 			resultOverlap += 1;
 		}
-		
-		
-		
-		
 	}
 	writeln("My answer for part 1: ", resultContains);
 	writeln("My answer for part 2: ", resultOverlap);
 }
-
-/*
-1 2 1 2
-2 1 2 1
-1 2 2 1
-2 1 1 2
-*/
