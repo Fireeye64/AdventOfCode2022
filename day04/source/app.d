@@ -17,7 +17,6 @@ void main() {
 		}
 		//Extract line info (Check if you can do it without array conversion later)
 		auto assignments = line[0..$-1].splitter(",").array();
-		writeln(assignments[0], ", ", assignments[1]);
 		auto firstAssignment = to!(long[])(assignments[0].splitter("-").array());
 		auto secondAssignment = to!(long[])(assignments[1].splitter("-").array());
 		firstAssignment.sort();
