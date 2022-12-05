@@ -5,7 +5,6 @@ import std.conv : to;
 import std.regex;
 import std.algorithm.mutation: reverse;
 import std.math.rounding: ceil;
-import std.string: isNumeric;
 
 void solve(string[] range) {
 	char[][] stacks9000;
