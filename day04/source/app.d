@@ -1,23 +1,30 @@
 import benchmark: BenchmarkRunner;
 import std.stdio;
-import std.string : strip;
 import std.range: empty;
-import std.array: array;
-import std.algorithm.iteration: splitter;
+import std.array: array, split;
 import std.algorithm.sorting: sort;
 import std.conv: to;
+import std.string: indexOf;
 
 void solve(string[] range) {
 	long resultContains = 0;
 	long resultOverlap = 0;
 	foreach (line; range) {
-		if (line.strip().empty) {
+		if (line.empty) {
 			continue;
 		}
-		//Extract line info (Check if you can do it without array conversion later)
-		auto assignments = line[0..$-1].splitter(",").array();
-		auto firstAssignment = to!(long[])(assignments[0].splitter("-").array());
-		auto secondAssignment = to!(long[])(assignments[1].splitter("-").array());
+		//Extract line info
+		auto assignments = line.split(",");
+		auto firstAssignment = to!(long[])(assignments[0].split("-"));
+		auto secondAssignment = to!(long[])(assignments[1].split("-"));
+		// Alternative method, much faster but less readable
+		/*
+		auto first = line.indexOf("-", 0);
+		auto second = line.indexOf(",", first);
+		auto third = line.indexOf("-", second);
+		auto firstAssignment = to!(long[])([line[0..first], line[first+1 .. second]]);
+		auto secondAssignment = to!(long[])([line[second+1 .. third], line[third+1 .. $]]);
+		*/
 		firstAssignment.sort();
 		secondAssignment.sort();
 		//Part 1

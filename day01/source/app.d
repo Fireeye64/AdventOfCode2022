@@ -1,6 +1,5 @@
 import benchmark: BenchmarkRunner;
 import std.stdio;
-import std.string : strip;
 import std.range: empty;
 import std.algorithm.searching: maxElement;
 import std.conv : to;
@@ -11,11 +10,11 @@ void solve(string[] range) {
 	long[] caloriesTotalList;
 	long tmpCalories = 0;
 	foreach (line; range) {
-		if ((line.strip().empty) && (tmpCalories > 0)) {
+		if ((line.empty) && (tmpCalories > 0)) {
 			caloriesTotalList ~= tmpCalories;
 			tmpCalories = 0;
 		} else {
-			tmpCalories += to!long(line.strip());
+			tmpCalories += to!long(line);
 		}
 	}
 	caloriesTotalList.sort!("a > b");

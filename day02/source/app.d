@@ -5,7 +5,7 @@ void solve(string[] range) {
 	long totalScoreAction = 0;
 	long totalScoreOutcome = 0;
 	foreach (line; range) {
-		if (line.length == 4) {
+		if (line.length == 3) {
 			int myChoice = line[2] - 'X';
 			int opponentChoice = line[0] - 'A';
 			// Part 1
