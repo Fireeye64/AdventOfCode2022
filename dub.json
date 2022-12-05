@@ -6,6 +6,7 @@
 	"description": "advent of code 2022",
 	"license": "proprietary",
 	"name": "adventofcode2022",
+	"targetType": "sourceLibrary",
 	"subPackages": [
 		{
 			"name": "day01",
@@ -36,6 +37,14 @@
 			"targetType": "executable",
 			"sourcePaths": ["day04/source"],
 			"workingDirectory": "day04",
+			"dependencies": {
+				"adventofcode2022": "*"
+			}
+		}, {
+			"name": "day05",
+			"targetType": "executable",
+			"sourcePaths": ["day05/source"],
+			"workingDirectory": "day05",
 			"dependencies": {
 				"adventofcode2022": "*"
 			}
