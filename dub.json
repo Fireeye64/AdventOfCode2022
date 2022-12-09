@@ -64,6 +64,14 @@
 			"dependencies": {
 				"adventofcode2022": "*"
 			}
+		}, {
+			"name": "day08",
+			"targetType": "executable",
+			"sourcePaths": ["day08/source"],
+			"workingDirectory": "day08",
+			"dependencies": {
+				"adventofcode2022": "*"
+			}
 		}
 	]
 }
